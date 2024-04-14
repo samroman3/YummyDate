@@ -19,7 +19,7 @@ To add YummyDate to your SwiftUI project, simply add it as a dependency to your 
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/yourusername/YummyDate.git", .upToNextMajor(from: "1.0.0"))
+    .package(url: "https://github.com/samroman3/YummyDate.git", .upToNextMajor(from: "1.0.0"))
 ]
 ```
 
