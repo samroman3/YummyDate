@@ -16,7 +16,6 @@
 		3A2BA41A2BCB4AB5001258DA /* YummyDateSampleAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BA4192BCB4AB5001258DA /* YummyDateSampleAppApp.swift */; };
 		3A2BA41C2BCB4AB5001258DA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BA41B2BCB4AB5001258DA /* ContentView.swift */; };
 		3A2BA4202BCB4AB7001258DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A2BA41F2BCB4AB7001258DA /* Assets.xcassets */; };
-		3A2BA4232BCB4AB7001258DA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A2BA4222BCB4AB7001258DA /* Preview Assets.xcassets */; };
 		3A2BA4282BCB4B28001258DA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BA41B2BCB4AB5001258DA /* ContentView.swift */; };
 		3A2BA42B2BCB4BA4001258DA /* YummyTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BA42A2BCB4BA4001258DA /* YummyTheme.swift */; };
 		3A2BA42C2BCB4EAE001258DA /* YummyDateSampleAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BA4192BCB4AB5001258DA /* YummyDateSampleAppApp.swift */; };
@@ -49,9 +48,9 @@
 		3A2BA4192BCB4AB5001258DA /* YummyDateSampleAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummyDateSampleAppApp.swift; sourceTree = "<group>"; };
 		3A2BA41B2BCB4AB5001258DA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3A2BA41F2BCB4AB7001258DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3A2BA4222BCB4AB7001258DA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3A2BA42A2BCB4BA4001258DA /* YummyTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummyTheme.swift; sourceTree = "<group>"; };
 		3ABCD50E2BCC0C2F00E8D3EC /* DateSelectionManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectionManagerTests.swift; sourceTree = "<group>"; };
+		3ABCD5172BCC1B1B00E8D3EC /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,9 +82,9 @@
 		3A2BA3E72BCB465D001258DA = {
 			isa = PBXGroup;
 			children = (
-				3A2BA3F32BCB465D001258DA /* YummyDate */,
-				3A2BA3FF2BCB465E001258DA /* YummyDateTests */,
-				3A2BA4182BCB4AB5001258DA /* YummyDateSampleApp */,
+				3ABCD5172BCC1B1B00E8D3EC /* Package.swift */,
+				3ABCD5132BCC1A2400E8D3EC /* Sources */,
+				3ABCD5142BCC1A3500E8D3EC /* Tests */,
 				3A2BA3F22BCB465D001258DA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -127,17 +126,25 @@
 				3A2BA4192BCB4AB5001258DA /* YummyDateSampleAppApp.swift */,
 				3A2BA41B2BCB4AB5001258DA /* ContentView.swift */,
 				3A2BA41F2BCB4AB7001258DA /* Assets.xcassets */,
-				3A2BA4212BCB4AB7001258DA /* Preview Content */,
 			);
 			path = YummyDateSampleApp;
 			sourceTree = "<group>";
 		};
-		3A2BA4212BCB4AB7001258DA /* Preview Content */ = {
+		3ABCD5132BCC1A2400E8D3EC /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				3A2BA4222BCB4AB7001258DA /* Preview Assets.xcassets */,
+				3A2BA4182BCB4AB5001258DA /* YummyDateSampleApp */,
+				3A2BA3F32BCB465D001258DA /* YummyDate */,
 			);
-			path = "Preview Content";
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		3ABCD5142BCC1A3500E8D3EC /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3A2BA3FF2BCB465E001258DA /* YummyDateTests */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,7 +274,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A2BA4232BCB4AB7001258DA /* Preview Assets.xcassets in Resources */,
 				3A2BA4202BCB4AB7001258DA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,6 +467,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -493,6 +500,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -552,7 +560,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"YummyDateSampleApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = BHJSDBBPS7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -581,7 +589,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"YummyDateSampleApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = BHJSDBBPS7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
