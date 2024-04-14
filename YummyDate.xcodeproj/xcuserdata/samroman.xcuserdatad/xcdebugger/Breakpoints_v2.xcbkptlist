@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "DB29EA09-53CA-4189-A861-9EAE10C56D19"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0B119C26-60B0-4B34-B48A-931B155B2192"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YummyDate/DateSelectorView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "setupWeekDates()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0B119C26-60B0-4B34-B48A-931B155B2192 - 16bb6c9508eae423"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "YummyDateSampleApp.DateSelectorView.generateWeekDates(centeredAround: Foundation.Date) -&gt; ()"
+                  moduleName = "YummyDateSampleApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/samroman/Documents/YummyDate/YummyDate/DateSelectorView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "660">
+               </Location>
+               <Location
+                  uuid = "0B119C26-60B0-4B34-B48A-931B155B2192 - 9ef92815191a44e5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "YummyDate.DateSelectorView.setupWeekDates() -&gt; ()"
+                  moduleName = "YummyDate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/samroman/Documents/YummyDate/YummyDate/DateSelectorView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "147">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "209C1E7D-07D2-4B7E-8585-D40632F7DE08"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YummyDate/DateSelectorView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "adjustWeekDates(for:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "209C1E7D-07D2-4B7E-8585-D40632F7DE08 - 16bb6c9508eae47d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "YummyDateSampleApp.DateSelectorView.generateWeekDates(centeredAround: Foundation.Date) -&gt; ()"
+                  moduleName = "YummyDateSampleApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/samroman/Documents/YummyDate/YummyDate/DateSelectorView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "94"
+                  endingLineNumber = "94"
+                  offsetFromSymbolStart = "1064">
+               </Location>
+               <Location
+                  uuid = "209C1E7D-07D2-4B7E-8585-D40632F7DE08 - ee50dde30068d7ac"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "YummyDate.DateSelectorView.adjustWeekDates(for: Foundation.Date) -&gt; ()"
+                  moduleName = "YummyDate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/samroman/Documents/YummyDate/YummyDate/DateSelectorView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "94"
+                  endingLineNumber = "94"
+                  offsetFromSymbolStart = "49">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C4DA6FB1-DAEE-441D-9FE8-A232169D9B93"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YummyDate/DateSelectorView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "generateWeekDates(centeredAround:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C4DA6FB1-DAEE-441D-9FE8-A232169D9B93 - 2ea345c8de77db62"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "YummyDateSampleApp.DateSelectorView.moveWeek(by: Swift.Int) -&gt; ()"
+                  moduleName = "YummyDateSampleApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/samroman/Documents/YummyDate/YummyDate/DateSelectorView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "1624">
+               </Location>
+               <Location
+                  uuid = "C4DA6FB1-DAEE-441D-9FE8-A232169D9B93 - c5b32a0ba5ae07bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "YummyDate.DateSelectorView.generateWeekDates(centeredAround: Foundation.Date) -&gt; ()"
+                  moduleName = "YummyDate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/samroman/Documents/YummyDate/YummyDate/DateSelectorView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "1211">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

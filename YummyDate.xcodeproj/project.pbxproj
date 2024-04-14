@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3A2BA3F62BCB465D001258DA /* YummyDate.docc in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BA3F52BCB465D001258DA /* YummyDate.docc */; };
 		3A2BA3FC2BCB465E001258DA /* YummyDate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2BA3F12BCB465D001258DA /* YummyDate.framework */; };
-		3A2BA4012BCB465E001258DA /* YummyDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BA4002BCB465E001258DA /* YummyDateTests.swift */; };
 		3A2BA4022BCB465E001258DA /* YummyDate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A2BA3F42BCB465D001258DA /* YummyDate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3A2BA4102BCB4A3B001258DA /* DateSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BA40D2BCB4A3A001258DA /* DateSelectorView.swift */; };
 		3A2BA4112BCB4A3B001258DA /* YummyDateBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BA40E2BCB4A3B001258DA /* YummyDateBar.swift */; };
@@ -25,6 +24,7 @@
 		3A2BA42E2BCB50A7001258DA /* YummyDateBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BA40E2BCB4A3B001258DA /* YummyDateBar.swift */; };
 		3A2BA42F2BCB50A9001258DA /* DateSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BA40D2BCB4A3A001258DA /* DateSelectorView.swift */; };
 		3A2BA4302BCB50AB001258DA /* DateSelectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BA40F2BCB4A3B001258DA /* DateSelectionManager.swift */; };
+		3ABCD50F2BCC0C2F00E8D3EC /* DateSelectionManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABCD50E2BCC0C2F00E8D3EC /* DateSelectionManagerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +42,6 @@
 		3A2BA3F42BCB465D001258DA /* YummyDate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YummyDate.h; sourceTree = "<group>"; };
 		3A2BA3F52BCB465D001258DA /* YummyDate.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = YummyDate.docc; sourceTree = "<group>"; };
 		3A2BA3FB2BCB465E001258DA /* YummyDateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YummyDateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A2BA4002BCB465E001258DA /* YummyDateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummyDateTests.swift; sourceTree = "<group>"; };
 		3A2BA40D2BCB4A3A001258DA /* DateSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectorView.swift; sourceTree = "<group>"; };
 		3A2BA40E2BCB4A3B001258DA /* YummyDateBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummyDateBar.swift; sourceTree = "<group>"; };
 		3A2BA40F2BCB4A3B001258DA /* DateSelectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectionManager.swift; sourceTree = "<group>"; };
@@ -52,6 +51,7 @@
 		3A2BA41F2BCB4AB7001258DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A2BA4222BCB4AB7001258DA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3A2BA42A2BCB4BA4001258DA /* YummyTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummyTheme.swift; sourceTree = "<group>"; };
+		3ABCD50E2BCC0C2F00E8D3EC /* DateSelectionManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectionManagerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +116,7 @@
 		3A2BA3FF2BCB465E001258DA /* YummyDateTests */ = {
 			isa = PBXGroup;
 			children = (
-				3A2BA4002BCB465E001258DA /* YummyDateTests.swift */,
+				3ABCD50E2BCC0C2F00E8D3EC /* DateSelectionManagerTests.swift */,
 			);
 			path = YummyDateTests;
 			sourceTree = "<group>";
@@ -293,7 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A2BA4012BCB465E001258DA /* YummyDateTests.swift in Sources */,
+				3ABCD50F2BCC0C2F00E8D3EC /* DateSelectionManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

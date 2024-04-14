@@ -10,8 +10,8 @@ import SwiftUI
 public struct DateSelectorView: View {
     @ObservedObject var selectionManager: DateSelectionManager
     @Binding var selectedDate: Date
-    @State private var weekDates: [Date] = []
-    @State private var centerIndex: Int = 0  // Used only for infinite scrolling
+    @State public var weekDates: [Date] = []
+    @State public var centerIndex: Int = 0  // Used only for infinite scrolling
 
     
     private let calendar = Calendar.current
@@ -23,6 +23,12 @@ public struct DateSelectorView: View {
     
     var theme: YummyTheme
     
+    public init(selectionManager: DateSelectionManager, selectedDate: Binding<Date>, theme: YummyTheme) {
+          self.selectionManager = selectionManager
+          self._selectedDate = selectedDate
+          self.theme = theme
+          self.dateFormatter.dateFormat = "E, dd MMM"
+      }
     
     public var body: some View {
         ScrollViewReader { proxy in
@@ -80,15 +86,15 @@ public struct DateSelectorView: View {
         }
     }
     
-    private func setupWeekDates() {
+    public func setupWeekDates() {
         adjustWeekDates(for: selectedDate)
     }
     
-    private func adjustWeekDates(for date: Date) {
+    public func adjustWeekDates(for date: Date) {
         generateWeekDates(centeredAround: date)
     }
     
-    private func generateWeekDates(centeredAround referenceDate: Date) {
+    public func generateWeekDates(centeredAround referenceDate: Date) {
         var dates = [Date]()
         for offset in -3...3 {
             if let date = calendar.date(byAdding: .day, value: offset, to: referenceDate) {
@@ -98,7 +104,7 @@ public struct DateSelectorView: View {
         weekDates = dates
     }
     
-    private func moveWeek(by offset: Int) {
+    public func moveWeek(by offset: Int) {
         guard let shiftedWeekStart = calendar.date(byAdding: .weekOfYear, value: offset, to: weekDates.first ?? selectedDate) else { return }
         generateWeekDates(centeredAround: shiftedWeekStart)
     }
