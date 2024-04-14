@@ -22,42 +22,56 @@ public struct DateSelectorView: View {
     var theme: YummyTheme
     
     public var body: some View {
-        HStack {
-            Button("<") {
-                withAnimation(.easeInOut(duration: 0.2)) {
-                    moveWeek(by: -1)
+        ScrollViewReader { proxy in
+            HStack {
+                Button("<") {
+                    withAnimation(.easeInOut(duration: 0.2)) {
+                        moveWeek(by: -1)
+                    }
                 }
-            }
-            .font(theme.primaryFont)
-            .buttonStyle(PlainButtonStyle())
-            .foregroundColor(theme.tertiaryColor)
+                .font(theme.primaryFont)
+                .buttonStyle(PlainButtonStyle())
+                .foregroundColor(theme.tertiaryColor)
 
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 10) {
-                    ForEach(weekDates, id: \.self) { date in
-                        DateButton(date: date, isSelected: isDateSelected(date), dateFormatter: dateFormatter, theme: theme) {
-                            withAnimation(.easeInOut(duration: 0.2)) {
-                                selectedDate = date
-                                selectionManager.updateSelectedDate(to: date)
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 10) {
+                        ForEach(weekDates.indices, id: \.self) { index in
+                            DateButton(date: weekDates[index], isSelected: isDateSelected(weekDates[index]), dateFormatter: dateFormatter, theme: theme) {
+                                withAnimation(.easeInOut(duration: 0.2)) {
+                                    selectedDate = weekDates[index]
+                                    selectionManager.updateSelectedDate(to: weekDates[index])
+                                }
                             }
+                            .id(index)
+                        }
+                    }
+                    .padding(.horizontal)
+                }
+                .onAppear() {
+                    setupWeekDates()
+                    adjustWeekDates(for: selectedDate)
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+                        proxy.scrollTo(3, anchor: .center)
+                    }
+                }
+                .onChange(of: selectedDate) { newDate in
+                    adjustWeekDates(for: newDate)
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                        withAnimation(theme.animation) {
+                            proxy.scrollTo(3, anchor: .center)
                         }
                     }
                 }
-                .padding(.horizontal)
-            }
-            .onAppear(perform: setupWeekDates)
 
-            Button(">") {
-                withAnimation(.easeInOut(duration: 0.2)) {
-                    moveWeek(by: 1)
+                Button(">") {
+                    withAnimation(.easeInOut(duration: 0.2)) {
+                        moveWeek(by: 1)
+                    }
                 }
+                .font(theme.primaryFont)
+                .buttonStyle(PlainButtonStyle())
+                .foregroundColor(theme.tertiaryColor)
             }
-            .font(theme.primaryFont)
-            .buttonStyle(PlainButtonStyle())
-            .foregroundColor(theme.tertiaryColor)
-        }
-        .onChange(of: selectedDate) { newDate in
-            adjustWeekDates(for: newDate)
         }
     }
     
@@ -66,19 +80,22 @@ public struct DateSelectorView: View {
     }
     
     private func adjustWeekDates(for date: Date) {
-        if !weekDates.contains(where: { calendar.isDate($0, inSameDayAs: date) }) {
-            generateWeekDates(startingFrom: date)
-        }
+        generateWeekDates(centeredAround: date)
     }
     
-    private func generateWeekDates(startingFrom referenceDate: Date) {
-        guard let weekStart = calendar.date(from: calendar.dateComponents([.yearForWeekOfYear, .weekOfYear], from: referenceDate)) else { return }
-        weekDates = (0..<7).compactMap { calendar.date(byAdding: .day, value: $0, to: weekStart) }
+    private func generateWeekDates(centeredAround referenceDate: Date) {
+        var dates = [Date]()
+        for offset in -3...3 {
+            if let date = calendar.date(byAdding: .day, value: offset, to: referenceDate) {
+                dates.append(date)
+            }
+        }
+        weekDates = dates
     }
     
     private func moveWeek(by offset: Int) {
         guard let shiftedWeekStart = calendar.date(byAdding: .weekOfYear, value: offset, to: weekDates.first ?? selectedDate) else { return }
-        generateWeekDates(startingFrom: shiftedWeekStart)
+        generateWeekDates(centeredAround: shiftedWeekStart)
     }
 
     private func isDateSelected(_ date: Date) -> Bool {
