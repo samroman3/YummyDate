@@ -7,7 +7,12 @@
 
 import SwiftUI
 
-public class DateSelectionManager: ObservableObject {
+protocol DateSelectionManaging: AnyObject {
+    var selectedDate: Date { get set }
+    func updateSelectedDate(to newDate: Date)
+}
+
+public class DateSelectionManager: ObservableObject, DateSelectionManaging {
     @Published var selectedDate: Date
 
     public init(initialDate: Date = Date()) {
