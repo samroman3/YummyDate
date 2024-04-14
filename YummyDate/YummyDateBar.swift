@@ -19,6 +19,14 @@ public struct YummyDateBar: View {
     
     var theme: YummyTheme
     
+    public init(selectionManager: DateSelectionManager, selectedDate: Binding<Date>, onDateTapped: @escaping () -> Void, onCalendarTapped: @escaping () -> Void, theme: YummyTheme) {
+         self.selectionManager = selectionManager
+         self._selectedDate = selectedDate
+         self.onDateTapped = onDateTapped
+         self.onCalendarTapped = onCalendarTapped
+         self.theme = theme
+     }
+     
     public var body: some View {
         VStack {
             HStack {

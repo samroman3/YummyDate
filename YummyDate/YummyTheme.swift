@@ -18,7 +18,7 @@ public struct YummyTheme: Equatable {
     var barAlignment: Alignment
     var animation: Animation
 
-    static let limeTheme = YummyTheme(
+    public static let limeTheme = YummyTheme(
         primaryColor: Color(red: 0.75, green: 0.88, blue: 0.06),
         secondaryColor: Color(red: 1.0, green: 1.0, blue: 1.0),
         tertiaryColor: Color(red: 0.55, green: 0.55, blue: 0.55),
@@ -30,7 +30,7 @@ public struct YummyTheme: Equatable {
         animation: .spring
     )
 
-    static let sunsetTheme = YummyTheme(
+    public static let sunsetTheme = YummyTheme(
         primaryColor: Color(red: 0.99, green: 0.37, blue: 0.33),
         secondaryColor: Color(red: 0.93, green: 0.11, blue: 0.14),
         tertiaryColor: Color(red: 0.29, green: 0.08, blue: 0.55),
@@ -42,7 +42,7 @@ public struct YummyTheme: Equatable {
         animation: .default
     )
 
-    static let oceanTheme = YummyTheme(
+    public static let oceanTheme = YummyTheme(
         primaryColor: Color(red: 0.00, green: 0.53, blue: 0.82),
         secondaryColor: Color(red: 0.67, green: 0.84, blue: 0.90),
         tertiaryColor: Color(red: 0.20, green: 0.60, blue: 0.86),
