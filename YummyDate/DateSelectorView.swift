@@ -11,6 +11,8 @@ public struct DateSelectorView: View {
     @ObservedObject var selectionManager: DateSelectionManager
     @Binding var selectedDate: Date
     @State private var weekDates: [Date] = []
+    @State private var centerIndex: Int = 0  // Used only for infinite scrolling
+
     
     private let calendar = Calendar.current
     private let dateFormatter: DateFormatter = {
@@ -21,6 +23,7 @@ public struct DateSelectorView: View {
     
     var theme: YummyTheme
     
+    
     public var body: some View {
         ScrollViewReader { proxy in
             HStack {
@@ -29,6 +32,7 @@ public struct DateSelectorView: View {
                         moveWeek(by: -1)
                     }
                 }
+                .accessibilityLabel("back week")
                 .font(theme.primaryFont)
                 .buttonStyle(PlainButtonStyle())
                 .foregroundColor(theme.tertiaryColor)
@@ -68,6 +72,7 @@ public struct DateSelectorView: View {
                         moveWeek(by: 1)
                     }
                 }
+                .accessibilityLabel("forward week")
                 .font(theme.primaryFont)
                 .buttonStyle(PlainButtonStyle())
                 .foregroundColor(theme.tertiaryColor)

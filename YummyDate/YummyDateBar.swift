@@ -40,7 +40,9 @@ public struct YummyDateBar: View {
                         .imageScale(.medium)
                         .foregroundColor(theme.primaryColor)
                 }
-                Spacer()
+                if theme.barAlignment == .center || theme.barAlignment == .leading {
+                    Spacer()
+                }
                 Button(action: {
                     withAnimation(.easeInOut(duration: 0.3)) {
                         self.isExpanded.toggle()
@@ -70,8 +72,11 @@ public struct YummyDateBar: View {
                         }
                     }
                 }
+                if theme.barAlignment == .trailing || theme.barAlignment == .center {
+                    Spacer()
+                }
             }
-            .padding([.vertical,.horizontal])
+            .padding()
             if isExpanded {
                 DateSelectorView(selectionManager: selectionManager, selectedDate: $selectedDate, theme: theme)
                     .padding(.horizontal)

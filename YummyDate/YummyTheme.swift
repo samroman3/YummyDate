@@ -17,6 +17,13 @@ public struct YummyTheme: Equatable {
     var secondaryFont: Font
     var barAlignment: Alignment
     var animation: Animation
+    var scrollBehavior: ScrollBehavior
+
+    enum ScrollBehavior {
+        case staticScroll
+        case infiniteScroll
+    }
+
 
     public static let limeTheme = YummyTheme(
         primaryColor: Color(red: 0.75, green: 0.88, blue: 0.06),
@@ -27,7 +34,8 @@ public struct YummyTheme: Equatable {
         primaryFont: .title,
         secondaryFont: .body,
         barAlignment: .leading,
-        animation: .spring
+        animation: .spring,
+        scrollBehavior: .infiniteScroll
     )
 
     public static let sunsetTheme = YummyTheme(
@@ -39,7 +47,8 @@ public struct YummyTheme: Equatable {
         primaryFont: .headline,
         secondaryFont: .callout,
         barAlignment: .trailing,
-        animation: .default
+        animation: .default,
+        scrollBehavior: .staticScroll
     )
 
     public static let oceanTheme = YummyTheme(
@@ -51,10 +60,11 @@ public struct YummyTheme: Equatable {
         primaryFont: .title2,
         secondaryFont: .title3,
         barAlignment: .center,
-        animation: .bouncy
+        animation: .bouncy, 
+        scrollBehavior: .infiniteScroll
     )
 
-    init(primaryColor: Color, secondaryColor: Color, tertiaryColor: Color, primaryTextColor: Color, secondaryTextColor: Color, primaryFont: Font, secondaryFont: Font, barAlignment: Alignment, animation: Animation) {
+    init(primaryColor: Color, secondaryColor: Color, tertiaryColor: Color, primaryTextColor: Color, secondaryTextColor: Color, primaryFont: Font, secondaryFont: Font, barAlignment: Alignment, animation: Animation, scrollBehavior: ScrollBehavior) {
         self.primaryColor = primaryColor
         self.secondaryColor = secondaryColor
         self.tertiaryColor = tertiaryColor
@@ -64,6 +74,7 @@ public struct YummyTheme: Equatable {
         self.secondaryFont = secondaryFont
         self.barAlignment = barAlignment
         self.animation = animation
+        self.scrollBehavior = scrollBehavior
     }
 }
 
