@@ -11,6 +11,20 @@
 		3A2BA3FC2BCB465E001258DA /* YummyDate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2BA3F12BCB465D001258DA /* YummyDate.framework */; };
 		3A2BA4012BCB465E001258DA /* YummyDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BA4002BCB465E001258DA /* YummyDateTests.swift */; };
 		3A2BA4022BCB465E001258DA /* YummyDate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A2BA3F42BCB465D001258DA /* YummyDate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A2BA4102BCB4A3B001258DA /* DateSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BA40D2BCB4A3A001258DA /* DateSelectorView.swift */; };
+		3A2BA4112BCB4A3B001258DA /* YummyDateBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BA40E2BCB4A3B001258DA /* YummyDateBar.swift */; };
+		3A2BA4122BCB4A3B001258DA /* DateSelectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BA40F2BCB4A3B001258DA /* DateSelectionManager.swift */; };
+		3A2BA41A2BCB4AB5001258DA /* YummyDateSampleAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BA4192BCB4AB5001258DA /* YummyDateSampleAppApp.swift */; };
+		3A2BA41C2BCB4AB5001258DA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BA41B2BCB4AB5001258DA /* ContentView.swift */; };
+		3A2BA4202BCB4AB7001258DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A2BA41F2BCB4AB7001258DA /* Assets.xcassets */; };
+		3A2BA4232BCB4AB7001258DA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A2BA4222BCB4AB7001258DA /* Preview Assets.xcassets */; };
+		3A2BA4282BCB4B28001258DA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BA41B2BCB4AB5001258DA /* ContentView.swift */; };
+		3A2BA42B2BCB4BA4001258DA /* YummyTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BA42A2BCB4BA4001258DA /* YummyTheme.swift */; };
+		3A2BA42C2BCB4EAE001258DA /* YummyDateSampleAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BA4192BCB4AB5001258DA /* YummyDateSampleAppApp.swift */; };
+		3A2BA42D2BCB50A4001258DA /* YummyTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BA42A2BCB4BA4001258DA /* YummyTheme.swift */; };
+		3A2BA42E2BCB50A7001258DA /* YummyDateBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BA40E2BCB4A3B001258DA /* YummyDateBar.swift */; };
+		3A2BA42F2BCB50A9001258DA /* DateSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BA40D2BCB4A3A001258DA /* DateSelectorView.swift */; };
+		3A2BA4302BCB50AB001258DA /* DateSelectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BA40F2BCB4A3B001258DA /* DateSelectionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +43,15 @@
 		3A2BA3F52BCB465D001258DA /* YummyDate.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = YummyDate.docc; sourceTree = "<group>"; };
 		3A2BA3FB2BCB465E001258DA /* YummyDateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YummyDateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A2BA4002BCB465E001258DA /* YummyDateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummyDateTests.swift; sourceTree = "<group>"; };
+		3A2BA40D2BCB4A3A001258DA /* DateSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectorView.swift; sourceTree = "<group>"; };
+		3A2BA40E2BCB4A3B001258DA /* YummyDateBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummyDateBar.swift; sourceTree = "<group>"; };
+		3A2BA40F2BCB4A3B001258DA /* DateSelectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectionManager.swift; sourceTree = "<group>"; };
+		3A2BA4172BCB4AB5001258DA /* YummyDateSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YummyDateSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A2BA4192BCB4AB5001258DA /* YummyDateSampleAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummyDateSampleAppApp.swift; sourceTree = "<group>"; };
+		3A2BA41B2BCB4AB5001258DA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3A2BA41F2BCB4AB7001258DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3A2BA4222BCB4AB7001258DA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3A2BA42A2BCB4BA4001258DA /* YummyTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummyTheme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +70,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3A2BA4142BCB4AB5001258DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -55,6 +85,7 @@
 			children = (
 				3A2BA3F32BCB465D001258DA /* YummyDate */,
 				3A2BA3FF2BCB465E001258DA /* YummyDateTests */,
+				3A2BA4182BCB4AB5001258DA /* YummyDateSampleApp */,
 				3A2BA3F22BCB465D001258DA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -64,6 +95,7 @@
 			children = (
 				3A2BA3F12BCB465D001258DA /* YummyDate.framework */,
 				3A2BA3FB2BCB465E001258DA /* YummyDateTests.xctest */,
+				3A2BA4172BCB4AB5001258DA /* YummyDateSampleApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,6 +104,10 @@
 			isa = PBXGroup;
 			children = (
 				3A2BA3F42BCB465D001258DA /* YummyDate.h */,
+				3A2BA40F2BCB4A3B001258DA /* DateSelectionManager.swift */,
+				3A2BA40D2BCB4A3A001258DA /* DateSelectorView.swift */,
+				3A2BA40E2BCB4A3B001258DA /* YummyDateBar.swift */,
+				3A2BA42A2BCB4BA4001258DA /* YummyTheme.swift */,
 				3A2BA3F52BCB465D001258DA /* YummyDate.docc */,
 			);
 			path = YummyDate;
@@ -83,6 +119,25 @@
 				3A2BA4002BCB465E001258DA /* YummyDateTests.swift */,
 			);
 			path = YummyDateTests;
+			sourceTree = "<group>";
+		};
+		3A2BA4182BCB4AB5001258DA /* YummyDateSampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				3A2BA4192BCB4AB5001258DA /* YummyDateSampleAppApp.swift */,
+				3A2BA41B2BCB4AB5001258DA /* ContentView.swift */,
+				3A2BA41F2BCB4AB7001258DA /* Assets.xcassets */,
+				3A2BA4212BCB4AB7001258DA /* Preview Content */,
+			);
+			path = YummyDateSampleApp;
+			sourceTree = "<group>";
+		};
+		3A2BA4212BCB4AB7001258DA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3A2BA4222BCB4AB7001258DA /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +190,23 @@
 			productReference = 3A2BA3FB2BCB465E001258DA /* YummyDateTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		3A2BA4162BCB4AB5001258DA /* YummyDateSampleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A2BA4242BCB4AB7001258DA /* Build configuration list for PBXNativeTarget "YummyDateSampleApp" */;
+			buildPhases = (
+				3A2BA4132BCB4AB5001258DA /* Sources */,
+				3A2BA4142BCB4AB5001258DA /* Frameworks */,
+				3A2BA4152BCB4AB5001258DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YummyDateSampleApp;
+			productName = YummyDateSampleApp;
+			productReference = 3A2BA4172BCB4AB5001258DA /* YummyDateSampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -149,6 +221,9 @@
 						CreatedOnToolsVersion = 15.0.1;
 					};
 					3A2BA3FA2BCB465E001258DA = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					3A2BA4162BCB4AB5001258DA = {
 						CreatedOnToolsVersion = 15.0.1;
 					};
 				};
@@ -168,6 +243,7 @@
 			targets = (
 				3A2BA3F02BCB465D001258DA /* YummyDate */,
 				3A2BA3FA2BCB465E001258DA /* YummyDateTests */,
+				3A2BA4162BCB4AB5001258DA /* YummyDateSampleApp */,
 			);
 		};
 /* End PBXProject section */
@@ -187,6 +263,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3A2BA4152BCB4AB5001258DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A2BA4232BCB4AB7001258DA /* Preview Assets.xcassets in Resources */,
+				3A2BA4202BCB4AB7001258DA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -194,7 +279,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A2BA4122BCB4A3B001258DA /* DateSelectionManager.swift in Sources */,
+				3A2BA42C2BCB4EAE001258DA /* YummyDateSampleAppApp.swift in Sources */,
+				3A2BA4282BCB4B28001258DA /* ContentView.swift in Sources */,
+				3A2BA4102BCB4A3B001258DA /* DateSelectorView.swift in Sources */,
+				3A2BA4112BCB4A3B001258DA /* YummyDateBar.swift in Sources */,
 				3A2BA3F62BCB465D001258DA /* YummyDate.docc in Sources */,
+				3A2BA42B2BCB4BA4001258DA /* YummyTheme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +294,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A2BA4012BCB465E001258DA /* YummyDateTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A2BA4132BCB4AB5001258DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A2BA4302BCB50AB001258DA /* DateSelectionManager.swift in Sources */,
+				3A2BA42D2BCB50A4001258DA /* YummyTheme.swift in Sources */,
+				3A2BA42F2BCB50A9001258DA /* DateSelectorView.swift in Sources */,
+				3A2BA42E2BCB50A7001258DA /* YummyDateBar.swift in Sources */,
+				3A2BA41C2BCB4AB5001258DA /* ContentView.swift in Sources */,
+				3A2BA41A2BCB4AB5001258DA /* YummyDateSampleAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +511,7 @@
 		3A2BA4092BCB465E001258DA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BHJSDBBPS7;
@@ -423,6 +528,7 @@
 		3A2BA40A2BCB465E001258DA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BHJSDBBPS7;
@@ -431,6 +537,64 @@
 				PRODUCT_BUNDLE_IDENTIFIER = samroman.YummyDateTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3A2BA4252BCB4AB7001258DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"YummyDateSampleApp/Preview Content\"";
+				DEVELOPMENT_TEAM = BHJSDBBPS7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = samroman.YummyDateSampleApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3A2BA4262BCB4AB7001258DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"YummyDateSampleApp/Preview Content\"";
+				DEVELOPMENT_TEAM = BHJSDBBPS7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = samroman.YummyDateSampleApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -462,6 +626,15 @@
 			buildConfigurations = (
 				3A2BA4092BCB465E001258DA /* Debug */,
 				3A2BA40A2BCB465E001258DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A2BA4242BCB4AB7001258DA /* Build configuration list for PBXNativeTarget "YummyDateSampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A2BA4252BCB4AB7001258DA /* Debug */,
+				3A2BA4262BCB4AB7001258DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
