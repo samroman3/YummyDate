@@ -22,7 +22,7 @@ struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var items: [Item]
     @State private var currentTheme = YummyTheme.limeTheme  
-    @StateObject private var dateSelectionManager = DateSelectionManager()
+    @StateObject private var dateSelectionManager = BaseDateSelectionManager()
     @State private var selectedDate = Date()
 
     var body: some View {
@@ -30,8 +30,8 @@ struct ContentView: View {
             YummyDateBar(selectionManager: dateSelectionManager,
                          selectedDate: $selectedDate,
                          onDateTapped: {
-                    //DateSelectionManager can be replaced or added to existing logic for date handling (fetching logs with date, refreshing, etc.)
-                   //This closes dateselector and goes back to today,extra methods can be added or called here.
+                    //DateSelectionManager can be replaced with a custom class that inherits from BaseDateSelectionManager. You can also override existing logic for robust date handling (fetching logs with date, refreshing other views, etc.)
+                   //Default behavior of onDateTapped() closes DateSelectorView and sets selectedDate back to Today if resetOnTap == true. Extra methods can be added or called here.
             },
                          onCalendarTapped: {},
                          theme: currentTheme

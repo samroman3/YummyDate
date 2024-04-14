@@ -42,7 +42,7 @@ import YummyDate
 
 Initialize the DateSelectionManager and bind it to YummyDateBar and DateSelectorView:
 ```swift
-@StateObject private var dateSelectionManager = DateSelectionManager()
+@StateObject private var dateSelectionManager = BaseDateSelectionManager()
 
 YummyDateBar(selectionManager: dateSelectionManager,
              selectedDate: $dateSelectionManager.selectedDate,
@@ -52,14 +52,29 @@ YummyDateBar(selectionManager: dateSelectionManager,
 ```
 ### DateSelectionManaging Protocol
 
-If you would like to further date handling outside of DateSelectionManager you may use the DateSelectionManaging Protocol on your own class. 
+If you would like further date handling you can extend BaseDateSelectionManager or directly conform to DateSelectionManaging if you prefer implementing the ObservableObject requirements yourself.
 
 ```swift
-class MyDateManager: DateSelectionManaging {
-    @Published var selectedDate: Date
+class CustomDateSelectionManager: BaseDateSelectionManager {
+    override func updateSelectedDate(to newDate: Date) {
+        // Custom logic here
+        super.updateSelectedDate(to: newDate)
+    }
+}
+```
+Or, for full custom implementations:
 
-    init(initialDate: Date = Date()) {
-        self.selectedDate = initialDate
+```swift
+class AnotherCustomManager: DateSelectionManaging {
+    var objectWillChange = ObservableObjectPublisher()
+    private var _selectedDate: Date = Date()
+
+    var selectedDate: Date {
+        get { _selectedDate }
+        set {
+            _selectedDate = newValue
+            objectWillChange.send()
+        }
     }
 
     func updateSelectedDate(to newDate: Date) {
@@ -68,6 +83,24 @@ class MyDateManager: DateSelectionManaging {
 }
 ```
 
+And in your views:
+
+```swift
+struct MyView {
+@StateObject private var dateSelectionManager = AnotherCustomManager()
+@State private var selectedDate = Date()
+
+var body: some View {
+    NavigationSplitView {
+        YummyDateBar(selectionManager: dateSelectionManager,
+        selectedDate: $selectedDate,
+        onDateTapped: {},
+        onCalendarTapped: {},
+        theme: currentTheme)
+        }
+    }
+}
+    ```
 ## Themes
 YummyDate comes with three built-in themes.
 

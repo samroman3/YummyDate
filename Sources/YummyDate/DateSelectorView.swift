@@ -6,24 +6,25 @@
 //
 
 import SwiftUI
+import Combine
 
 public struct DateSelectorView: View {
-    @ObservedObject var selectionManager: DateSelectionManager
-    @Binding var selectedDate: Date
+    @ObservedObject var selectionManager: BaseDateSelectionManager
+    @Binding public var selectedDate: Date
     @State public var weekDates: [Date] = []
     @State public var centerIndex: Int = 0  // Used only for infinite scrolling
 
     
-    private let calendar = Calendar.current
-    private let dateFormatter: DateFormatter = {
+    public let calendar = Calendar.current
+    public let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "E, dd MMM"
         return formatter
     }()
     
-    var theme: YummyTheme
+    public var theme: YummyTheme
     
-    public init(selectionManager: DateSelectionManager, selectedDate: Binding<Date>, theme: YummyTheme) {
+    public init(selectionManager: BaseDateSelectionManager, selectedDate: Binding<Date>, theme: YummyTheme) {
           self.selectionManager = selectionManager
           self._selectedDate = selectedDate
           self.theme = theme
@@ -34,7 +35,7 @@ public struct DateSelectorView: View {
         ScrollViewReader { proxy in
             HStack {
                 Button("<") {
-                    withAnimation(.easeInOut(duration: 0.2)) {
+                    withAnimation(theme.animation) {
                         moveWeek(by: -1)
                     }
                 }
@@ -47,7 +48,7 @@ public struct DateSelectorView: View {
                     HStack(spacing: 10) {
                         ForEach(weekDates.indices, id: \.self) { index in
                             DateButton(date: weekDates[index], isSelected: isDateSelected(weekDates[index]), dateFormatter: dateFormatter, theme: theme) {
-                                withAnimation(.easeInOut(duration: 0.2)) {
+                                withAnimation(theme.animation) {
                                     selectedDate = weekDates[index]
                                     selectionManager.updateSelectedDate(to: weekDates[index])
                                 }
@@ -74,7 +75,7 @@ public struct DateSelectorView: View {
                 }
 
                 Button(">") {
-                    withAnimation(.easeInOut(duration: 0.2)) {
+                    withAnimation(theme.animation) {
                         moveWeek(by: 1)
                     }
                 }
@@ -109,19 +110,19 @@ public struct DateSelectorView: View {
         generateWeekDates(centeredAround: shiftedWeekStart)
     }
 
-    private func isDateSelected(_ date: Date) -> Bool {
+    public func isDateSelected(_ date: Date) -> Bool {
         calendar.isDate(selectedDate, inSameDayAs: date)
     }
 }
 
-struct DateButton: View {
+public struct DateButton: View {
     let date: Date
     let isSelected: Bool
     let dateFormatter: DateFormatter
     var theme: YummyTheme
     let action: () -> Void
 
-    var body: some View {
+    public var body: some View {
         Button(action: action) {
             Text(dateFormatter.string(from: date))
                 .font(theme.secondaryFont)

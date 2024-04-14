@@ -6,20 +6,22 @@
 //
 
 import SwiftUI
+import Combine
 
-protocol DateSelectionManaging: AnyObject {
+public protocol DateSelectionManaging: ObservableObject {
     var selectedDate: Date { get set }
     func updateSelectedDate(to newDate: Date)
 }
 
-public class DateSelectionManager: ObservableObject, DateSelectionManaging {
-    @Published var selectedDate: Date
-
-    public init(initialDate: Date = Date()) {
-        self.selectedDate = initialDate
-    }
-
-    func updateSelectedDate(to newDate: Date) {
+public class BaseDateSelectionManager: DateSelectionManaging {
+    @Published public var selectedDate: Date = Date()
+    
+    public func updateSelectedDate(to newDate: Date) {
         selectedDate = newDate
     }
 }
+
+public class CustomDateSelectionManager: BaseDateSelectionManager {
+
+}
+

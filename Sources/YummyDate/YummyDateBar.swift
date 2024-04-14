@@ -8,7 +8,7 @@
 import SwiftUI
 
 public struct YummyDateBar: View {
-    @ObservedObject var selectionManager: DateSelectionManager
+    @ObservedObject var selectionManager: BaseDateSelectionManager
     
     @Binding var selectedDate: Date
     
@@ -19,7 +19,7 @@ public struct YummyDateBar: View {
     
     var theme: YummyTheme
     
-    public init(selectionManager: DateSelectionManager, selectedDate: Binding<Date>, onDateTapped: @escaping () -> Void, onCalendarTapped: @escaping () -> Void, theme: YummyTheme) {
+    public init(selectionManager: BaseDateSelectionManager, selectedDate: Binding<Date>, onDateTapped: @escaping () -> Void, onCalendarTapped: @escaping () -> Void, theme: YummyTheme) {
          self.selectionManager = selectionManager
          self._selectedDate = selectedDate
          self.onDateTapped = onDateTapped
@@ -31,7 +31,7 @@ public struct YummyDateBar: View {
         VStack {
             HStack {
                 Button(action: {
-                    withAnimation(.easeIn) {
+                    withAnimation(theme.animation) {
                         self.isExpanded.toggle()
                     }
                     //This can be replaced with onCalendarTapped to open a full calendar or present more options
@@ -44,10 +44,12 @@ public struct YummyDateBar: View {
                     Spacer()
                 }
                 Button(action: {
-                    withAnimation(.easeInOut(duration: 0.3)) {
+                    withAnimation(theme.animation) {
+                        if theme.resetOnTap {
+                            self.selectedDate = Date()
+                            selectionManager.updateSelectedDate(to: self.selectedDate)
+                        }
                         self.isExpanded.toggle()
-                        self.selectedDate = Date()
-                        selectionManager.updateSelectedDate(to: Date())
                         onDateTapped()
                     }}) {
                     if isExpanded {

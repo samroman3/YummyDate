@@ -18,6 +18,7 @@ public struct YummyTheme: Equatable {
     var barAlignment: Alignment
     var animation: Animation
     var scrollBehavior: ScrollBehavior
+    var resetOnTap: Bool
 
     enum ScrollBehavior {
         case staticScroll
@@ -35,7 +36,9 @@ public struct YummyTheme: Equatable {
         secondaryFont: .body,
         barAlignment: .leading,
         animation: .spring,
-        scrollBehavior: .infiniteScroll
+        scrollBehavior: .staticScroll,
+        resetOnTap: true
+
     )
 
     public static let sunsetTheme = YummyTheme(
@@ -48,7 +51,8 @@ public struct YummyTheme: Equatable {
         secondaryFont: .callout,
         barAlignment: .trailing,
         animation: .default,
-        scrollBehavior: .staticScroll
+        scrollBehavior: .staticScroll,
+        resetOnTap: false
     )
 
     public static let oceanTheme = YummyTheme(
@@ -61,10 +65,11 @@ public struct YummyTheme: Equatable {
         secondaryFont: .title3,
         barAlignment: .center,
         animation: .bouncy, 
-        scrollBehavior: .infiniteScroll
+        scrollBehavior: .staticScroll,
+        resetOnTap: false
     )
 
-    init(primaryColor: Color, secondaryColor: Color, tertiaryColor: Color, primaryTextColor: Color, secondaryTextColor: Color, primaryFont: Font, secondaryFont: Font, barAlignment: Alignment, animation: Animation, scrollBehavior: ScrollBehavior) {
+    init(primaryColor: Color, secondaryColor: Color, tertiaryColor: Color, primaryTextColor: Color, secondaryTextColor: Color, primaryFont: Font, secondaryFont: Font, barAlignment: Alignment, animation: Animation, scrollBehavior: ScrollBehavior, resetOnTap: Bool) {
         self.primaryColor = primaryColor
         self.secondaryColor = secondaryColor
         self.tertiaryColor = tertiaryColor
@@ -75,6 +80,7 @@ public struct YummyTheme: Equatable {
         self.barAlignment = barAlignment
         self.animation = animation
         self.scrollBehavior = scrollBehavior
+        self.resetOnTap = resetOnTap
     }
 }
 
