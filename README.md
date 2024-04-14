@@ -12,6 +12,12 @@ YummyDate is a highly customizable SwiftUI date picker framework designed to mak
 - **Date Selection Manager**: Leverages `DateSelectionManager` for easy date management within your app.
 
 ## Getting Started
+### Requirements
+iOS 14.0+
+
+Xcode 11+
+
+Swift 5.1+
 
 ### Installation
 
