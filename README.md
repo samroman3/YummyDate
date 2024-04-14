@@ -100,7 +100,7 @@ var body: some View {
         }
     }
 }
-    ```
+```
 ## Themes
 YummyDate comes with three built-in themes.
 
