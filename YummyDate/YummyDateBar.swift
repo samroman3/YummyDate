@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct YummyDateBar: View {
+public struct YummyDateBar: View {
     @ObservedObject var selectionManager: DateSelectionManager
     
     @Binding var selectedDate: Date
@@ -19,7 +19,7 @@ struct YummyDateBar: View {
     
     var theme: YummyTheme
     
-    var body: some View {
+    public var body: some View {
         VStack {
             HStack {
                 Button(action: {

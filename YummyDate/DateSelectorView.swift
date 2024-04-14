@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DateSelectorView: View {
+public struct DateSelectorView: View {
     @ObservedObject var selectionManager: DateSelectionManager
     @Binding var selectedDate: Date
     @State private var weekDates: [Date] = []
@@ -21,7 +21,7 @@ struct DateSelectorView: View {
     
     var theme: YummyTheme
     
-    var body: some View {
+    public var body: some View {
         HStack {
             Button("<") {
                 withAnimation(.easeInOut(duration: 0.2)) {

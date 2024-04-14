@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct YummyTheme: Equatable {
+public struct YummyTheme: Equatable {
     var primaryColor: Color
     var secondaryColor: Color
     var tertiaryColor: Color
