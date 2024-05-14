@@ -1,7 +1,5 @@
 # YummyDate
-
-![152](https://github.com/samroman3/YummyDate/assets/52180475/60ed708e-6cb1-47ae-8ef8-3585ea7f6ec2)
-
+<img src="https://github.com/samroman3/YummyDate/assets/52180475/af14cd5a-104b-499b-a22c-bd63a965309a" width = "200" height = "200">
 
 YummyDate is a highly customizable SwiftUI date picker framework designed to make it easy to add stylish date selection functionality to iOS applications.
 
